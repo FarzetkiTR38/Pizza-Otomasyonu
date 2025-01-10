@@ -43,20 +43,20 @@ int main(){
 
 	cout << "##############################################" << endl;
 	cout << "#                                            #" << endl;
-	cout << "#              Hoþ Geldiniz!                 #" << endl;
+	cout << "#              HoÅŸ Geldiniz!                 #" << endl;
 	cout << "#                                            #" << endl;
 	cout << "##############################################" << endl;
 	cout << endl;
 
 	cout << "##############################################" << endl;
 	cout << "#                                            #" << endl;
-	cout << "#           ** Seçim Yapýnýz **              #" << endl;
+	cout << "#           ** SeÃ§im YapÄ±nÄ±z **              #" << endl;
 	cout << "#                                            #" << endl;
 	cout << "#           1 - Pizza Ekleme                 #" << endl;
 	cout << "#           2 - Pizza Listeleme              #" << endl;
 	cout << "#           3 - Pizza Arama                  #" << endl;
 	cout << "#           4 - Pizza Silme                  #" << endl;
-	cout << "#           5 - Pizza Düzenleme              #" << endl;
+	cout << "#           5 - Pizza DÃ¼zenleme              #" << endl;
 	cout << "#                                            #" << endl;
 	cout << "##############################################" << endl;
 	cout << endl;
@@ -93,7 +93,7 @@ int main(){
 		}
 	}
 	
-	cout << "Anamenüye dönmek için: \'a\' tuþuna basýn, çýkmak için \'c\' tuþuna basýn." << endl; 
+	cout << "AnamenÃ¼ye dÃ¶nmek iÃ§in: \'a\' tuÅŸuna basÄ±n, Ã§Ä±kmak iÃ§in \'c\' tuÅŸuna basÄ±n." << endl; 
 	anamenu = getche();
 	
     } while(anamenu == 'a');
@@ -113,27 +113,27 @@ void PizzaEkle()
 	
 	do
 	{
-	cout << "Pizza Numarasýný Giriniz" << endl;
+	cout << "Pizza NumarasÄ±nÄ± Giriniz" << endl;
 	cin >> pizza.pizza_no;
 	cout << "Pizza Ana Maddesini Giriniz" << endl;
 	cin >> pizza.anamadde;
-	cout << "Pizzanýn Kenar Tipini Giriniz" << endl;
+	cout << "PizzanÄ±n Kenar Tipini Giriniz" << endl;
 	cin >> pizza.kenartipi;
-	cout << "Pizzanýn Hamur Türünü Giriniz" << endl;
+	cout << "PizzanÄ±n Hamur TÃ¼rÃ¼nÃ¼ Giriniz" << endl;
 	cin >> pizza.hamurturu;
-	cout << "Pizzanýn Malzemelerini Giriniz" << endl;
+	cout << "PizzanÄ±n Malzemelerini Giriniz" << endl;
 	cin >> pizza.malzemeler;
-	cout << "Pizzanýn Sos Çeþidini Giriniz" << endl;
+	cout << "PizzanÄ±n Sos Ã‡eÅŸidini Giriniz" << endl;
 	cin >> pizza.soscesidi;
-	cout << "Pizzanýn ebatýný giriniz(küçük/orta/büyük)" << endl;
+	cout << "PizzanÄ±n ebatÄ±nÄ± giriniz(kÃ¼Ã§Ã¼k/orta/bÃ¼yÃ¼k)" << endl;
 	cin >> pizza.boyut;
-	cout << "Pizzanýn fiyatýný giriniz" << endl;
+	cout << "PizzanÄ±n fiyatÄ±nÄ± giriniz" << endl;
 	cin >> pizza.fiyat;
 	
 	cout << endl;
 	yaz.write((char*)&pizza, sizeof(pizza));	
 	adet++;	
-	cout << "Baþka Pizza Eklemek Ýster misiniz? (E/H)" << endl;
+	cout << "BaÅŸka Pizza Eklemek Ä°ster misiniz? (E/H)" << endl;
 	secim = getche();
 	cout << endl;
 	} while(secim == 'e' || secim == 'E');
@@ -156,9 +156,9 @@ void PizzaListeleme()
 	oku.seekg(0, ios::end);
 	int kayits = oku.tellg() / sizeof(pizza);
 	
-	// kontrol etmek için cout << oku.tellg(); yazýp deðeri görüp cout << sizeof(pizza); yazýp deðeri görüp bölümünü hesaplayabiliriz.
+	// kontrol etmek iÃ§in cout << oku.tellg(); yazÄ±p deÄŸeri gÃ¶rÃ¼p cout << sizeof(pizza); yazÄ±p deÄŸeri gÃ¶rÃ¼p bÃ¶lÃ¼mÃ¼nÃ¼ hesaplayabiliriz.
 	
-	cout << "Toplam Mevcut Pizza Sayýsý:"<< kayits << endl;
+	cout << "Toplam Mevcut Pizza SayÄ±sÄ±:"<< kayits << endl;
 	
 	if(kayits > 0) 
 	{
@@ -169,13 +169,13 @@ void PizzaListeleme()
 			oku.read((char*)&pizza, sizeof(pizza));	
 			cout << "----------------------------------" << endl;
 			cout << i+1 << ". Pizzanin Bilgileri"<< endl;
-			cout << "Pizzanýn Ana Maddesi: "<< pizza.anamadde << endl;
-			cout << "Pizzanýn Kenar Tipi: "<< pizza.kenartipi << endl;
-			cout << "Pizzanýn Hamur Türü: "<< pizza.hamurturu << endl;
-			cout << "Pizzanýn Ýçindeki Malzemeleri: "<< pizza.malzemeler << endl;
-			cout << "Pizzanýn Sos Çeþitleri: "<< pizza.soscesidi << endl;
-			cout << "Pizzanýn Boyutu: "<< pizza.boyut << endl;
-			cout << "Pizzanýn Fiyatý: "<< pizza.fiyat << endl;
+			cout << "PizzanÄ±n Ana Maddesi: "<< pizza.anamadde << endl;
+			cout << "PizzanÄ±n Kenar Tipi: "<< pizza.kenartipi << endl;
+			cout << "PizzanÄ±n Hamur TÃ¼rÃ¼: "<< pizza.hamurturu << endl;
+			cout << "PizzanÄ±n Ä°Ã§indeki Malzemeleri: "<< pizza.malzemeler << endl;
+			cout << "PizzanÄ±n Sos Ã‡eÅŸitleri: "<< pizza.soscesidi << endl;
+			cout << "PizzanÄ±n Boyutu: "<< pizza.boyut << endl;
+			cout << "PizzanÄ±n FiyatÄ±: "<< pizza.fiyat << endl;
 		}
 	}
 	else 
@@ -212,13 +212,13 @@ void PizzaArama()
 			
 			if(strcmp(pizza.pizza_no, pizza_no) == 0)
 			{
-			cout << "Pizzanýn Ana Maddesi: "<< pizza.anamadde <<endl ;
-			cout << "Pizzanýn Kenar Tipi: "<< pizza.kenartipi <<endl ;
-			cout << "Pizzanýn Hamur Türü: "<< pizza.hamurturu <<endl ;
-			cout << "Pizzanýn Ýçindeki Malzemeleri: "<< pizza.malzemeler <<endl ;
-			cout << "Pizzanýn Sos Çeþitleri: "<< pizza.soscesidi <<endl ;
-			cout << "Pizzanýn Boyutu: "<< pizza.boyut <<endl ;
-			cout << "Pizzanýn Fiyatý: "<< pizza.fiyat <<endl ;
+			cout << "PizzanÄ±n Ana Maddesi: "<< pizza.anamadde <<endl ;
+			cout << "PizzanÄ±n Kenar Tipi: "<< pizza.kenartipi <<endl ;
+			cout << "PizzanÄ±n Hamur TÃ¼rÃ¼: "<< pizza.hamurturu <<endl ;
+			cout << "PizzanÄ±n Ä°Ã§indeki Malzemeleri: "<< pizza.malzemeler <<endl ;
+			cout << "PizzanÄ±n Sos Ã‡eÅŸitleri: "<< pizza.soscesidi <<endl ;
+			cout << "PizzanÄ±n Boyutu: "<< pizza.boyut <<endl ;
+			cout << "PizzanÄ±n FiyatÄ±: "<< pizza.fiyat <<endl ;
 		    }
 		}	
 	}
@@ -244,7 +244,7 @@ void PizzaSil()
 
 	int kayitsayisi = oku.tellg() / sizeof(pizza);
 	
-    cout<<"Kaydýný Sileceðiniz Pizza Numarasýný Giriniz: ";
+    cout<<"KaydÄ±nÄ± SileceÄŸiniz Pizza NumarasÄ±nÄ± Giriniz: ";
     cin >> pizzano;
 
     for(int i = 0; i < kayitsayisi; i++)
@@ -255,14 +255,14 @@ void PizzaSil()
     	if(strcmp(pizza.pizza_no, pizzano) == 0)
     	{
             cout<<endl;
-            cout<<"Pizzanýn";
+            cout<<"PizzanÄ±n";
             cout << "Ana Maddesi: "<< pizza.anamadde <<endl ;
 			cout << "Kenar Tipi: "<< pizza.kenartipi <<endl ;
-			cout << "Hamur Türü: "<< pizza.hamurturu <<endl ;
-			cout << "Ýçindeki Malzemeleri: "<< pizza.malzemeler <<endl ;
-			cout << "Sos Çeþitleri: "<< pizza.soscesidi <<endl ;
+			cout << "Hamur TÃ¼rÃ¼: "<< pizza.hamurturu <<endl ;
+			cout << "Ä°Ã§indeki Malzemeleri: "<< pizza.malzemeler <<endl ;
+			cout << "Sos Ã‡eÅŸitleri: "<< pizza.soscesidi <<endl ;
 			cout << "Boyutu: "<< pizza.boyut <<endl ;
-			cout << "Fiyatý: "<< pizza.fiyat <<endl ;
+			cout << "FiyatÄ±: "<< pizza.fiyat <<endl ;
  	 				  
             cout<<"\n\nSilmek Istediginiz Kayit Bu Mu? [E/H] : ";
             secim=getche();
@@ -340,7 +340,7 @@ void PizzaDuzenle()
 
 	int kayitsayisi = oku.tellg() / sizeof(pizza);
 		
-    cout << "Kaydýný Düzelteceðiniz Numarayý Giriniz: ";
+    cout << "KaydÄ±nÄ± DÃ¼zelteceÄŸiniz NumarayÄ± Giriniz: ";
      
 	cin >> pizzano;
 
@@ -351,14 +351,14 @@ void PizzaDuzenle()
 		
  		if(strcmp(pizza.pizza_no, pizzano) == 0)
  		{
-            cout<<"Pizzanýn" << endl;
+            cout<<"PizzanÄ±n" << endl;
             cout << "Ana Maddesi: "<< pizza.anamadde <<endl ;
 			cout << "Kenar Tipi: "<< pizza.kenartipi <<endl ;
-			cout << "Hamur Türü: "<< pizza.hamurturu <<endl ;
-			cout << "Ýçindeki Malzemeleri: "<< pizza.malzemeler <<endl ;
-			cout << "Sos Çeþitleri: "<< pizza.soscesidi <<endl ;
+			cout << "Hamur TÃ¼rÃ¼: "<< pizza.hamurturu <<endl ;
+			cout << "Ä°Ã§indeki Malzemeleri: "<< pizza.malzemeler <<endl ;
+			cout << "Sos Ã‡eÅŸitleri: "<< pizza.soscesidi <<endl ;
 			cout << "Boyutu: "<< pizza.boyut <<endl ;
-			cout << "Fiyatý: "<< pizza.fiyat <<endl ;
+			cout << "FiyatÄ±: "<< pizza.fiyat <<endl ;
             
             cout<<"\n\nDuzeltmek Istediginiz Kayit Bu Mu? [E/H] : ";
         	secim=getche();
@@ -367,28 +367,28 @@ void PizzaDuzenle()
              	var = true;
                 ofstream dosya("Yedek.dat", ios::app | ios::binary);
                 
-				cout << "Pizza Numarasýný Giriniz" << endl;
+				cout << "Pizza NumarasÄ±nÄ± Giriniz" << endl;
 				cin >> pizza.pizza_no;
 				
 				cout << "Pizza Ana Maddesini Giriniz" << endl;
 				cin >> pizza.anamadde;
 				
-				cout << "Pizzanýn Kenar Tipini Giriniz" << endl;
+				cout << "PizzanÄ±n Kenar Tipini Giriniz" << endl;
 				cin >> pizza.kenartipi;
 				
-				cout << "Pizzanýn Hamur Türünü Giriniz" << endl;
+				cout << "PizzanÄ±n Hamur TÃ¼rÃ¼nÃ¼ Giriniz" << endl;
 				cin >> pizza.hamurturu;
 				
-				cout << "Pizzanýn Malzemelerini Giriniz" << endl;
+				cout << "PizzanÄ±n Malzemelerini Giriniz" << endl;
 				cin >> pizza.malzemeler;
 				
-				cout << "Pizzanýn Sos Çeþidini Giriniz" << endl;
+				cout << "PizzanÄ±n Sos Ã‡eÅŸidini Giriniz" << endl;
 				cin >> pizza.soscesidi;
 				
-				cout << "Pizzanýn ebatýný giriniz(küçük/orta/büyük)" << endl;
+				cout << "PizzanÄ±n ebatÄ±nÄ± giriniz(kÃ¼Ã§Ã¼k/orta/bÃ¼yÃ¼k)" << endl;
 				cin >> pizza.boyut;
 				
-				cout << "Pizzanýn fiyatýný giriniz" << endl;
+				cout << "PizzanÄ±n fiyatÄ±nÄ± giriniz" << endl;
 				cin >> pizza.fiyat;
   
                 dosya.write((char*)&pizza, sizeof(pizza));
@@ -418,12 +418,12 @@ void PizzaDuzenle()
     {
        remove("Pizza.dat");
        rename("Yedek.dat", "Pizza.dat");
-       cout << "\nKayýt Düzeltildi." << endl;
+       cout << "\nKayÄ±t DÃ¼zeltildi." << endl;
 	}
     else
     {
        remove("Yedek.dat");
-       cout << "\nKayýt Bulunamadý" << endl;                  
+       cout << "\nKayÄ±t BulunamadÄ±" << endl;                  
 	}
 
 }
